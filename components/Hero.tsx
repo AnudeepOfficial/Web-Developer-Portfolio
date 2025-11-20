@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
     ArrowRight,
     Download,
@@ -17,7 +18,7 @@ const TypingTitles: React.FC = () => {
         "UI Developer",
         "Frontend Developer",
         "Backend Developer",
-        "Full Stack Web Developer",
+        "Full Stack Developer",
         "AI Enthusiast",
     ];
     const [index, setIndex] = useState(0);
@@ -130,19 +131,15 @@ const Hero: React.FC = () => {
                             transition={{ duration: 0.8, delay: 0.6 }}
                             className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6"
                         >
-                            <button
-                                onClick={() =>
-                                    document
-                                        .getElementById("projects")
-                                        ?.scrollIntoView({ behavior: "smooth" })
-                                }
-                                className="group relative px-6 py-3 rounded-full bg-white text-black font-semibold text-base overflow-hidden transition-transform active:scale-95"
+                            <Link
+                                to="/projects"
+                                className="group relative px-6 py-3 rounded-full bg-white text-black font-semibold text-base overflow-hidden transition-transform active:scale-95 inline-flex items-center justify-center"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
-                                    View Projects{" "}
+                                    View Projects {" "}
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </span>
-                            </button>
+                            </Link>
 
                             <button className="px-8 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 transition-all active:scale-95 flex items-center gap-2 group">
                                 <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />{" "}

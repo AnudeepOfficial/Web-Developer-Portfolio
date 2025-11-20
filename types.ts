@@ -14,6 +14,7 @@ export interface Project {
   technologies: string[];
   imageUrl: string;
   link?: string;
+  source: string | null;
 }
 
 export interface Skill {

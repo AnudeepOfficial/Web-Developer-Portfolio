@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
               <div className="p-8 relative z-20 -mt-20 flex-1 flex flex-col">
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech) => (
+                  {project.technologies.map((tech) => (
                     <span key={tech} className="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-blue-300 bg-blue-500/10 rounded-md border border-blue-500/20">
                       {tech}
                     </span>
@@ -75,12 +75,16 @@ const Projects: React.FC = () => {
                 </p>
 
                 <div className="flex items-center gap-6 pt-6 border-t border-white/5">
-                  <a href="#" className="flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
+                  <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
                     <ExternalLink size={16} /> Live Demo
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-white transition-colors">
-                    <Github size={16} /> Source
-                  </a>
+                  {
+                    project.source && (
+                      <a href={project.source} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-white transition-colors">
+                        <Github size={16} /> Source
+                      </a>
+                    )
+                  }
                 </div>
               </div>
             </motion.div>

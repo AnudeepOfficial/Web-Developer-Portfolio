@@ -6,6 +6,7 @@ import {
     FolderGit2,
     Wrench,
     Mail,
+    FileText,
     MessageSquare,
     MoreHorizontal,
 } from "lucide-react";
@@ -20,6 +21,7 @@ const Navbar: React.FC = () => {
         { name: "Skills", path: "/skills", Icon: Wrench },
         { name: "Projects", path: "/projects", Icon: FolderGit2 },
         { name: "Contact", path: "/contact", Icon: Mail },
+        { name: "Resume", path: "/resume", Icon: FileText },
     ];
     const [isMoreOpen, setIsMoreOpen] = useState(false);
 

@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
             </div>
             <div>
               <h4 className="text-xl font-bold text-white mb-2">Currently Exploring</h4>
-              <p className="text-gray-400">Experimenting with Rust for WebAssembly and advanced WebGL shaders to push browser limits.</p>
+              <p className="text-gray-400">Experimenting with Google Agentic Development Kit.</p>
             </div>
           </div>
         </motion.div>
