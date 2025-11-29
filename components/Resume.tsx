@@ -5,13 +5,13 @@ import resumePath from '@/assets/profile.pdf';
 const Resume: React.FC = () => {
 
   return (
-    <section className="min-h-screen py-20 bg-[#050505] text-white">
+    <section className="min-h-screen pt-5 pb-20 bg-[#050505] text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-4xl font-bold">Resume</h2>
           <a
             href={resumePath}
-            download
+            download="Anudeep Thummalapalli - Senior Software Engineer Resume.pdf"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black font-semibold"
           >
             <ArrowDown className="w-4 h-4" /> Download PDF
