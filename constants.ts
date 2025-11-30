@@ -167,7 +167,7 @@ Here is Anudeep's profile context:
 Name: ${PERSONAL_INFO.name}
 Role: ${PERSONAL_INFO.role}
 Bio: ${PERSONAL_INFO.about}
-
+Core Skills: ${CORE_SKILLS.join(", ")}
 Experience:
 ${EXPERIENCES.map(
     (e) =>
