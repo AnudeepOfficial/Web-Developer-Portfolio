@@ -1,7 +1,6 @@
 import React from 'react';
 import { SKILLS } from '../constants';
 import { CheckCircle2, Zap } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const Skills: React.FC = () => {
   return (
@@ -11,34 +10,14 @@ const Skills: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            Technical Expertise
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-gray-400 max-w-2xl mx-auto text-lg"
-          >
-            A comprehensive toolbelt honed over years of architectural challenges.
-          </motion.p>
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Technical Expertise</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">A comprehensive toolbelt honed over years of architectural challenges.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {SKILLS.map((skillGroup, idx) => (
-            <motion.div 
-              key={skillGroup.category} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -5 }}
+            <div
+              key={skillGroup.category}
               className="glass-panel p-8 rounded-3xl bg-gradient-to-b from-white/5 to-transparent hover:bg-white/10 border border-white/5 hover:border-white/10 transition-colors duration-300"
             >
               <h3 className="text-xl font-bold text-white mb-6 pb-4 border-b border-white/5 flex items-center gap-2">
@@ -52,18 +31,12 @@ const Skills: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Decorative Footer Element */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4 }}
-          className="mt-24 p-10 rounded-3xl bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-blue-900/10 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8"
-        >
+        <div className="mt-24 p-10 rounded-3xl bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-blue-900/10 border border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-start gap-4">
             <div className="p-3 rounded-full bg-blue-500/20 text-blue-400">
                <Zap size={24} />
@@ -73,7 +46,7 @@ const Skills: React.FC = () => {
               <p className="text-gray-400">Experimenting with Google Agentic Development Kit.</p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

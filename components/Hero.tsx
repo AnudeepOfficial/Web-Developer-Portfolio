@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { PERSONAL_INFO } from "../constants";
 import { motion } from "framer-motion";
+import profileImg from "@/assets/images/profile.jpeg";
 
 const TypingTitles: React.FC = () => {
     const titles = [
@@ -141,10 +142,17 @@ const Hero: React.FC = () => {
                                 </span>
                             </Link>
 
-                            <button className="px-8 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 transition-all active:scale-95 flex items-center gap-2 group">
-                                <Download className="w-4 h-4 group-hover:translate-y-1 transition-transform" />{" "}
-                                Download CV
-                            </button>
+
+                            <Link
+                                to="/resume"
+                                className="px-8 py-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white font-semibold text-lg hover:bg-white/10 transition-all active:scale-95 flex items-center gap-2 group"
+                            >
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Download Resume
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </span>
+                            </Link>
+
                         </motion.div>
 
                         <div className="flex items-center gap-6 mb-2">
@@ -162,7 +170,7 @@ const Hero: React.FC = () => {
                         <div className="w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
                             {/* Replace the src with your professional image in /public or an external URL */}
                             <img
-                                src="/profile.jpg"
+                                src={profileImg}
                                 alt="Anudeep Thummalapalli"
                                 className="object-cover w-full h-full"
                             />
@@ -207,7 +215,11 @@ const Hero: React.FC = () => {
                         <Github size={30} />
                     </a>
                     
-                    <a href="#" className="hover:text-pink-400">
+                    <a href={PERSONAL_INFO.instagram} 
+                        target="_blank"
+                        rel="noreferrer" 
+                        className="hover:text-pink-400" 
+                    >
                         <Instagram size={30} />
                     </a>
                     <a href="#" className="hover:text-blue-600">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -12,6 +13,7 @@ import Resume from './components/Resume';
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-blue-500/30 selection:text-blue-200 overflow-x-hidden pb-[96px] md:pb-16">
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] brightness-100 contrast-150 mix-blend-overlay"></div>
@@ -26,7 +28,7 @@ const App: React.FC = () => {
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
-              <Route path="/resume" element={<Resume />} />
+            <Route path="/resume" element={<Resume />} />
           </Routes>
         </main>
 

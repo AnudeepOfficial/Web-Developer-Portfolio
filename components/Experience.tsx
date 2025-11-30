@@ -1,33 +1,23 @@
 import React from 'react';
 import { EXPERIENCES } from '../constants';
 import { Briefcase } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="mb-20">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">Experience</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-80"></div>
-        </motion.div>
+        </div>
 
         <div className="relative space-y-16">
           {/* Continuous Vertical Line */}
           <div className="absolute left-4 md:left-8 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/0 via-blue-500/30 to-blue-500/0"></div>
 
           {EXPERIENCES.map((exp, index) => (
-            <motion.div 
+            <div 
               key={exp.id}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative pl-12 md:pl-20 group"
             >
               {/* Timeline Node */}
@@ -42,8 +32,7 @@ const Experience: React.FC = () => {
                 </span>
               </div>
 
-              <motion.div 
-                whileHover={{ scale: 1.01 }}
+              <div 
                 className="glass-panel p-8 rounded-2xl border border-white/5 bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm transition-all duration-300"
               >
                 <ul className="space-y-4">
@@ -54,8 +43,8 @@ const Experience: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
-            </motion.div>
+                </div>
+              </div>
           ))}
         </div>
       </div>
