@@ -6,12 +6,14 @@ export const PERSONAL_INFO = {
     name: "Anudeep Thummalapalli",
     role: "Senior Frontend Engineer",
     tagline: "Architecting scalable UI systems with React & TypeScript.",
-    about: "Senior Software Engineer with 7+ years of deep expertise in Angular, React.js, Next.js, JavaScript, TypeScript, and modern UI/UX principles. With a track record of modernizing legacy applications and building design systems from scratch, I focus on performance, accessibility, and developer experience. I combine engineering rigor with a passion for pixel-perfect aesthetics.",
+    about: "Senior Software Engineer (7+ years). Expertise in the full enterprise lifecycle: Synthesizing business requirements, architecting scalable solutions, engineering robust code, and governing secure deployment/maintenance on the cloud. Focused on delivering scalability, high-performance, reliable web applications.",
     email: "thummalapallianudeep@gmail.com",
     linkedin: "https://www.linkedin.com/in/anudeep-thummalapalli/",
     github: "https://github.com/AnudeepOfficial",
     instagram: "https://www.instagram.com/anudeepthummalapalli/"
 };
+
+export const CORE_SKILLS = ["Angular", "React", "Next.js", "Express.js", "Node.js", "TypeScript", "JavaScript", "PostgreSQL", "Oracle SQL", "AI Integration"];
 
 export const EXPERIENCES: Experience[] = [
     {

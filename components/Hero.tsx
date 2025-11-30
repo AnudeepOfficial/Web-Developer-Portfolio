@@ -10,7 +10,7 @@ import {
     Facebook,
     Mail,
 } from "lucide-react";
-import { PERSONAL_INFO } from "../constants";
+import { PERSONAL_INFO, CORE_SKILLS } from "../constants";
 import { motion } from "framer-motion";
 import profileImg from "@/assets/images/profile.jpeg";
 
@@ -124,6 +124,10 @@ const Hero: React.FC = () => {
 
                         <p className="text-base md:text-lg text-gray-400 max-w-xl mb-6">
                             {PERSONAL_INFO.about}
+                        </p>
+
+                        <p className="text-base md:text-lg text-gray-400 max-w-xl mb-6">
+                            {CORE_SKILLS.join(" • ")}
                         </p>
 
                         <motion.div
